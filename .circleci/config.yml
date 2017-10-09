@@ -2,7 +2,13 @@ version: 2
 jobs:
    build:
      docker:
-       - image: circleci/node:7.10
+       - image: jpaddison3/docker-test:latest
      steps:
-       - checkout
+       # - checkout
+       # - run:
+       #     name: Apt Dependencies
+       #     command: |
+       #       apt-get update && \
+       #       DEBIAN_FRONTEND=noninteractive apt-get install -y software-properties-common
+
        - run: node hello_world.js
