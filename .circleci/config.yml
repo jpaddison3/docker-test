@@ -3,7 +3,7 @@ jobs:
    build:
      docker:
        # Shouldn't use latest
-       - image: jpaddison3:docker-test:latest
+       - image: jpaddison3/docker-test:latest
      steps:
        - checkout
        - run: docker run docker-test
