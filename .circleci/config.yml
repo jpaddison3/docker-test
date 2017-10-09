@@ -2,8 +2,7 @@ version: 2
 jobs:
    build:
      docker:
-       # Shouldn't use latest
-       - image: jpaddison3/docker-test:latest
+       - image: circleci/node:7.10
      steps:
        - checkout
-       - run: docker run docker-test
+       - run: node hello_world.js
