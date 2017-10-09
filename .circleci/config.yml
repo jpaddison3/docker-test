@@ -2,7 +2,8 @@ version: 2
 jobs:
    build:
      docker:
-       - image: circleci/node:7.10
+       # Shouldn't use latest
+       - image: jpaddison3:docker-test:latest
      steps:
        - checkout
-       - run: echo "hello world"
+       - run: docker run docker-test
