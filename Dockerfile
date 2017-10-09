@@ -4,7 +4,7 @@ FROM node:boron
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y software-properties-common
 
-WORKDIR /docker-test
-ADD . /docker-test
+WORKDIR /root/project/
+ADD . /root/project/
 
 CMD ["node", "hello_world.js"]
